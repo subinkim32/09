@@ -6,14 +6,17 @@
 
 int main(int argc, char *argv[]) {
 	int grade[SIZE];
-	int i;
-	
-	printf("enter the grades of 5 students: \n");
+	int i, average;
+	int sum = 0;
 	
 	for (i=0; i<SIZE; i++)
+	{
+		printf("enter the grades of 5 students: ");
 		scanf("%d", &grade[i]);
+		sum += grade[i];
+	}
 		
-	for (i=0; i<SIZE; i++)
-		printf("grade[%d] = %d\n", i, grade[i]);
+	average = sum / SIZE;
+	printf("average: %d\n", average);
 	return 0;
 }
